@@ -1,0 +1,33 @@
+.inputfield {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 5px;
+	border: solid;
+	border-width: 2px;
+	border-radius: 5%;
+	width: 98vw;
+	padding: 2px;
+}
+.messageBody {
+	width: fit-content;
+	border: solid;
+	border-width: 1px;
+	padding: 5px;
+	border-radius: 10%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.imgAndName {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.profileImg {
+	height: 20px;
+	width: 20px;
+	border-radius: 40%;
+	margin-right: 4px;
+}

@@ -1,0 +1,8 @@
+.worldChat {
+	width: 100vw;
+	height: 86vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	/* border: solid; */
+}

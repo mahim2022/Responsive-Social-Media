@@ -1,0 +1,35 @@
+.post {
+	list-style-type: none;
+	border: solid;
+	border-right-width: 4px;
+	border-bottom-width: 4px;
+	border-top-width: 0.1px;
+	border-bottom-left-radius: 10%;
+	border-top-right-radius: 10%;
+	border-color: grey;
+	box-shadow: 10px;
+	margin-bottom: 10px;
+	width: fit-content;
+	/* margin-left: -20px; */
+	/* background-color: ; */
+	color: black;
+}
+
+.profilePic {
+	max-height: 23px;
+	max-width: 30px;
+	border-radius: 50%;
+}
+.imgNameDiv {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.innerText {
+	padding: 10px;
+	font-weight: 600;
+}
+
+.getPosts {
+}
