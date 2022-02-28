@@ -89,12 +89,12 @@ export const FollowCarousel = () => {
 						<div key={index} className="FollowList">
 							<Card
 								style={{
-									width: "25 rem",
+									width: " 40vw",
 									backgroundColor: "white",
 									color: "Black",
 									boxShadow: "1px",
 									border: "solid",
-									height: "140px",
+									height: "23vh",
 									borderRadius: "20%",
 								}}
 								className="profileCard"
@@ -165,12 +165,12 @@ export const FollowCarousel = () => {
 						<div key={index} className="FollowList">
 							<Card
 								style={{
-									width: "25 rem",
+									width: " 40vw",
 									backgroundColor: "white",
 									color: "Black",
 									boxShadow: "1px",
 									border: "solid",
-									height: "140px",
+									height: "23vh",
 									borderRadius: "20%",
 								}}
 								className="profileCard"

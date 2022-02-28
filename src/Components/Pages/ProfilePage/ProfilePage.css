@@ -1,0 +1,13 @@
+@media screen and (min-width: 600px) {
+	.profilePage {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.profileCard {
+		width: 40vw;
+	}
+	.posts {
+		width: 40vw;
+	}
+}

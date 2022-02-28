@@ -6,7 +6,6 @@ import { CurrentUserState } from "../States/CurrentUserState";
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { getAuth } from "firebase/auth";
-import logo from "../logos/logo.png";
 
 export const NavBar = () => {
 	const [currentUser, setCurrentUser] = useContext(CurrentUserState);
@@ -38,7 +37,7 @@ export const NavBar = () => {
 				width: "100vw",
 			}}
 			sticky="top"
-			style={{ borderRadius: "5px", width: "100vw" }}
+			style={{ width: "100vw" }}
 		>
 			<Container>
 				<Navbar.Brand as={Link} to="/">

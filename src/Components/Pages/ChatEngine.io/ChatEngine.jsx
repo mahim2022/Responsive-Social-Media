@@ -12,7 +12,7 @@ export const DirectChatPage = () => {
 	const [username, setUsername] = useState("");
 	const [loading, setLoading] = useState(true);
 
-	const authObject = { "PRIVATE-KEY": "61ebd382-619a-4e1f-9721-1944ca0b91cd" };
+	const authObject = { "PRIVATE-KEY": process.env.REACT_APP_CHAT_ENGINE_KEY };
 
 	////////GetUserImageFile//////
 	const getFile = async (url) => {
@@ -34,7 +34,7 @@ export const DirectChatPage = () => {
 				'headers': {
 					'userName': currentUser.email,
 					'userSecret': currentUser.uid,
-					'projectID': "bcb5e18e-fab0-46b0-8272-4da89165f0fb",
+					'projectID': process.env.REACT_APP_CHAT_ENGINE_ID,
 				},
 			})
 			.then(console.log(`authenticated`))
@@ -93,7 +93,7 @@ export const DirectChatPage = () => {
 				height="100vh"
 				userName={currentUser.email}
 				userSecret={currentUser.uid}
-				projectID="bcb5e18e-fab0-46b0-8272-4da89165f0fb            "
+				projectID={process.env.REACT_APP_CHAT_ENGINE_ID}
 			/>
 		</div>
 	);

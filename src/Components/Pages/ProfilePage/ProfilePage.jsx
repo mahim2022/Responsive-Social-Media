@@ -14,6 +14,7 @@ import {
 } from "firebase/firestore";
 import { Input } from "../../SmallerComponents/PostInput/Input";
 import { GetUserPosts } from "../../SmallerComponents/Posts/GetUserPosts";
+import "./ProfilePage.css";
 
 export const ProfilePage = () => {
 	const [post, setPost] = useState([]);
@@ -49,34 +50,38 @@ export const ProfilePage = () => {
 		return unsubscribe;
 	}, []);
 	return (
-		<div>
-			<Card
-				style={{
-					width: "25 rem",
-					backgroundColor: "white",
-					color: "Black",
-					boxShadow: "1px",
-					border: "solid",
-				}}
-				className="profileCard"
-			>
-				<Card.Img
-					variant="top"
-					src={currentUser.photoURL}
-					style={{ borderRadius: "45%" }}
-				/>
-				<Card.Body>
-					<Card.Title>{currentUser.displayName}</Card.Title>
-					<Card.Text>
-						{currentProfile ? (
-							<span>Followers:{currentProfile.followers.length}</span>
-						) : null}
-					</Card.Text>
-				</Card.Body>
-			</Card>
-			<Input></Input>
-			<h2 style={{ color: "white", paddingLeft: "10px" }}>Posts</h2>
-			<GetUserPosts name={currentUser.displayName}></GetUserPosts>
+		<div className="profilePage">
+			<div className="profileCard">
+				<Card
+					style={{
+						width: "25 rem",
+						backgroundColor: "white",
+						color: "Black",
+						boxShadow: "1px",
+						border: "solid",
+					}}
+					className="profileCard"
+				>
+					<Card.Img
+						variant="top"
+						src={currentUser.photoURL}
+						style={{ borderRadius: "45%" }}
+					/>
+					<Card.Body>
+						<Card.Title>{currentUser.displayName}</Card.Title>
+						<Card.Text>
+							{currentProfile ? (
+								<span>Followers:{currentProfile.followers.length}</span>
+							) : null}
+						</Card.Text>
+					</Card.Body>
+				</Card>
+			</div>
+			<div className="posts">
+				<Input></Input>
+				<h2 style={{ color: "white", paddingLeft: "10px" }}>Posts</h2>
+				<GetUserPosts name={currentUser.displayName}></GetUserPosts>
+			</div>
 		</div>
 	);
 };
