@@ -1,20 +1,25 @@
-import { FollowCarousel } from "../../SmallerComponents/Follow Carousal/FollowCarousol";
 import { SideBar } from "../../SmallerComponents/SideBar/SideBar";
-import { Homepage } from "../Homepage/Homepage";
 import "./PCHomepage.css";
 import { Input } from "../../SmallerComponents/PostInput/Input";
 import { GetPosts } from "../../SmallerComponents/Posts/GetPosts";
+import { GridCarousel } from "../../SmallerComponents/Follow Carousal/GridCarousel";
 
 export const PCHomepage = () => {
 	return (
 		<div className="homepageComponents">
-			<SideBar></SideBar>
-			<div style={{ width: "70vw", marginRight: "90px", paddingLeft: "12px" }}>
+			<div className="sideBar">
+				<SideBar></SideBar>
+			</div>
+
+			<div className="posts">
 				<Input></Input>
 				<h2 style={{ paddingBottom: "10px", marginLeft: "15px" }}>
 					Recent Posts
 				</h2>
 				<GetPosts></GetPosts>
+			</div>
+			<div style={{ width: "30vw", border: "solid", borderWidth: "0px" }}>
+				<GridCarousel></GridCarousel>
 			</div>
 		</div>
 	);

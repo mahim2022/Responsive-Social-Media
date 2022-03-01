@@ -1,0 +1,14 @@
+.FollowList {
+	border: solid;
+	border-width: 1px;
+	border-radius: 20%;
+	width: fit-content;
+	display: block;
+	text-align: center;
+}
+.carousel-container {
+	width: 100%;
+}
+.carousel-item {
+	width: 100%;
+}

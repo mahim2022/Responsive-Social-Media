@@ -9,16 +9,19 @@ import { NavBar } from "./Components/NavigationMenu/NavBootStrap";
 import { Routes, Route, Link } from "react-router-dom";
 import { Homepage } from "./Components/Pages/Homepage/Homepage";
 import { ProfilePage } from "./Components/Pages/ProfilePage/ProfilePage";
-import { FollowCarousel } from "./Components/SmallerComponents/Follow Carousal/FollowCarousol";
 import { WorldChat } from "./Components/Pages/WorldChat/WorldChat";
 import { DirectChatPage } from "./Components/Pages/ChatEngine.io/ChatEngine";
+import { GridCarousel } from "./Components/SmallerComponents/Follow Carousal/GridCarousel";
 
 function App() {
 	const [currentUser] = useContext(CurrentUserState);
 
 	if (!currentUser)
 		return (
-			<div className="App">
+			<div
+				className="App"
+				style={{ background: "black", height: "100vh", width: "100vw" }}
+			>
 				<SignInPage></SignInPage>
 			</div>
 		);
@@ -29,7 +32,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Homepage />} />
 					<Route path="/Profile/" element={<ProfilePage />} />
-					<Route path="/follow" element={<FollowCarousel />} />
+					<Route path="/follow" element={<GridCarousel />} />
 					<Route path="/worldChat" element={<WorldChat />} />
 					<Route path="/chatengine" element={<DirectChatPage />} />
 				</Routes>

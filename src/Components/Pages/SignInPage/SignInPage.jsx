@@ -50,7 +50,7 @@ export default function SignInPage() {
 	};
 
 	return (
-		<div>
+		<div style={{ textAlign: "center", position: "relative", top: "45vh" }}>
 			<button
 				onClick={() => {
 					SignIn();

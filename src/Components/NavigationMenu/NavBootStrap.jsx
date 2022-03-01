@@ -6,6 +6,7 @@ import { CurrentUserState } from "../States/CurrentUserState";
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { getAuth } from "firebase/auth";
+import "./NavBootStrap.css";
 
 export const NavBar = () => {
 	const [currentUser, setCurrentUser] = useContext(CurrentUserState);
@@ -45,7 +46,7 @@ export const NavBar = () => {
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
-					<Nav className="me-auto">
+					<Nav className="me-auto customNav">
 						<Nav.Link as={Link} to="/Profile/">
 							Profile
 						</Nav.Link>

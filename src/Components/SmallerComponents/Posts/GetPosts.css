@@ -9,10 +9,17 @@
 	border-color: grey;
 	box-shadow: 10px;
 	margin-bottom: 10px;
-	width: fit-content;
+	/* width: fit-content; */
+	width: 37vw;
+	height: 100px;
 	/* margin-left: -20px; */
 	/* background-color: ; */
 	color: black;
+}
+@media screen and (max-width: 600px) {
+	.post {
+		width: 85vw;
+	}
 }
 
 .profilePic {
